@@ -284,16 +284,14 @@ img {
   visibility: visible;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
 }
 .modal {
   display: flex;
   position: relative;
   width: 528px;
   height: 581px;
-  margin-top: 221px;
-  margin-right: auto;
-  margin-bottom: auto;
-  margin-left: auto;
+  margin: 221px auto auto auto;
   background: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -306,11 +304,13 @@ img {
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #ffffff;
+  background: var(--primary-white-color);
   border-radius: 50%;
   cursor: pointer;
 }
 .close-icon {
+  position: absolute;
+  transform: translate(-50%, -50%);
   fill: #000000;
 }
 /* section Чем мы занимаемся описани */
@@ -318,10 +318,10 @@ img {
   padding-top: 0;
 }
 .section-text {
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
   margin-left: calc(-1 * var(--section-text-set-gap));
 }
 .item-box {
@@ -358,10 +358,10 @@ img {
 
 /* section Чем мы занимаемся foto */
 .section-foto {
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
   margin-left: calc(-1 * var(--section-foto-set-gap));
 }
 .section-foto > .item {
@@ -370,15 +370,36 @@ img {
   );
   margin-left: var(--section-foto-set-gap);
 }
+.item.foto-thumb {
+  display: inline-block;
+  position: relative;
+}
+.foto-thumb-text {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+
+  background: rgba(47, 48, 58, 0.8);
+}
 /* section Чем мы занимаемся */
 .section.team {
   background-color: var(--accent-bg-color);
 }
 .section-card {
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
   margin-left: calc(-1 * var(--section-card-set-gap));
 }
 .section-card > .item {
@@ -398,16 +419,16 @@ img {
   text-align: center;
 }
 .card-title {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  margin-bottom: 10px;
 }
 .card-text {
+  margin-bottom: 16px;
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.18;
-  margin-bottom: 16px;
 }
 .social-network {
   display: inline-flex;
