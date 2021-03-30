@@ -129,6 +129,7 @@ img {
 .link-nav:hover,
 .link-nav:focus {
   color: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-nav {
   color: var(--text-title-color);
@@ -160,12 +161,12 @@ img {
 .link-contacts:hover,
 .link-contacts:focus {
   color: var(--accent-color);
-  /* outline: transparent;
-  opacity: 0.8; */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contacts:hover .link-contacts-icon,
 .link-contacts:focus .link-contacts-icon {
   fill: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contacts-icon {
   margin-right: 10px;
@@ -191,6 +192,7 @@ img {
 .address-contacts:hover,
 .address-contacts:focus {
   color: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-contacts {
   color: rgba(255, 255, 255, 0.6);
@@ -198,6 +200,7 @@ img {
 .address-map:hover,
 .address-map:focus {
   color: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-map {
   color: var(--primary-white-color);
@@ -249,6 +252,7 @@ img {
 .button-hero:hover,
 .button-hero:focus {
   background-color: #188ce8;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-hero {
   display: inline-block;
@@ -447,6 +451,7 @@ img {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon {
   fill: var(--icons-color);
@@ -454,6 +459,7 @@ img {
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
   fill: var(--primary-white-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Клиенты */
 .clients-titel {
@@ -489,10 +495,12 @@ img {
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
   fill: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover,
 .clients-link:focus {
   border: 1px solid var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* footer */
 .footer {
@@ -533,6 +541,7 @@ img {
 .social-link.end:hover,
 .social-link.end:focus {
   background-color: var(--accent-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* portfolio */
 
@@ -557,6 +566,7 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button {
   background-color: var(--accent-bg-color);
@@ -611,9 +621,41 @@ img {
 .filter-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-box {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+}
+/* пример */
+.boxproba {
+  position: relative;
+  overflow: hidden;
+}
+.item:hover .tekct {
+  transform: translateY(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tekct {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+}
+.gry {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 322px;
+  height: 168px;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: #ffffff;
 }
