@@ -93,9 +93,6 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.page-header.border {
-  border-bottom: 1px solid #ececec;
-}
 /* site nav */
 .page-header .container {
   display: flex;
@@ -223,14 +220,17 @@ img {
   padding-top: 24px;
   padding-bottom: 25px;
 }
+.page-header.web {
+  padding-bottom: 26px;
+}
+.page-header.border {
+  border-bottom: 1px solid #ececec;
+}
 .hero {
   background-color: #c4c4c4;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-}
-.overlay.bordertop {
-  border-top: 1px solid #ececec; /*костыль*/
 }
 .overlay {
   height: 600px;
@@ -653,6 +653,9 @@ img {
   overflow: hidden;
 }
 .item:hover .animation-box-thumb {
+  transform: translateY(0);
+}
+.item:focus .animation-box-thumb {
   transform: translateY(0);
 }
 .animation-box-thumb {
