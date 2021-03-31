@@ -141,7 +141,7 @@ img {
 .link-nav.current::after {
   content: '';
   position: absolute;
-  top: 44px;
+  top: 45px;
   left: 0;
   display: block;
   width: 100%;
@@ -228,6 +228,9 @@ img {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+}
+.overlay.bordertop {
+  border-top: 1px solid #ececec; /*костыль*/
 }
 .overlay {
   height: 600px;
