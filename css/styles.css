@@ -129,14 +129,27 @@ img {
 .link-nav:hover,
 .link-nav:focus {
   color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-nav {
   color: var(--text-title-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link-nav.current {
+  position: relative;
   color: var(--accent-color);
 }
+.link-nav.current::after {
+  content: '';
+  position: absolute;
+  top: 44px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
 }
@@ -161,16 +174,15 @@ img {
 .link-contacts:hover,
 .link-contacts:focus {
   color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contacts:hover .link-contacts-icon,
 .link-contacts:focus .link-contacts-icon {
   fill: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contacts-icon {
   margin-right: 10px;
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contacts {
   /* добавил падинги чтобы выровнять рамку при фокусе */
@@ -179,6 +191,7 @@ img {
   display: flex;
   align-items: center;
   color: var(--text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-list {
   font-style: normal;
@@ -192,18 +205,18 @@ img {
 .address-contacts:hover,
 .address-contacts:focus {
   color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-contacts {
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-map:hover,
 .address-map:focus {
   color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-map {
   color: var(--primary-white-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* section */
 .page-header {
@@ -252,13 +265,13 @@ img {
 .button-hero:hover,
 .button-hero:focus {
   background-color: #188ce8;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-hero {
   display: inline-block;
+  padding: 10px 32px;
+  min-width: 200px;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
-
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -268,8 +281,7 @@ img {
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  padding: 10px 32px;
-  min-width: 200px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* modal js */
 .backdrop.is-hidden {
@@ -293,9 +305,11 @@ img {
 .modal {
   display: flex;
   position: relative;
-  width: 528px;
+  top: 221px;
+  left: 50%;
+  max-width: 528px;
   height: 581px;
-  margin: 221px auto auto auto;
+  transform: translate(-50%);
   background: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -384,7 +398,7 @@ img {
   align-items: center;
   position: absolute;
   width: 100%;
-  height: 70px;
+  min-height: 70px;
   bottom: 0;
   margin: 0;
   font-weight: 700;
@@ -447,19 +461,19 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon {
   fill: var(--icons-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
   fill: var(--primary-white-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Клиенты */
 .clients-titel {
@@ -488,19 +502,19 @@ img {
   height: 90px;
   border: 1px solid var(--icons-color);
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   fill: var(--icons-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
   fill: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover,
 .clients-link:focus {
   border: 1px solid var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* footer */
 .footer {
@@ -534,6 +548,7 @@ img {
 }
 .social-link.end {
   background: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon.end {
   fill: var(--primary-white-color);
@@ -541,7 +556,6 @@ img {
 .social-link.end:hover,
 .social-link.end:focus {
   background-color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* portfolio */
 
@@ -566,7 +580,6 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button {
   background-color: var(--accent-bg-color);
@@ -580,6 +593,9 @@ img {
   border-radius: 4px;
   border: transparent;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* filter */
 .filter-item {
@@ -616,28 +632,27 @@ img {
 }
 .filter-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-link:hover,
 .filter-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-box {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
-/* пример */
-.boxproba {
+/* анимация фильтра */
+.animation-box {
   position: relative;
   overflow: hidden;
 }
-.item:hover .tekct {
+.item:hover .animation-box-thumb {
   transform: translateY(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.tekct {
+.animation-box-thumb {
   position: absolute;
   top: 0;
   left: 0;
@@ -645,14 +660,14 @@ img {
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.gry {
+.animation-box-text {
   display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 322px;
-  height: 168px;
   transform: translate(-50%, -50%);
   font-size: 18px;
   line-height: 1.56;
