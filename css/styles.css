@@ -652,10 +652,8 @@ img {
   position: relative;
   overflow: hidden;
 }
-.item:hover .animation-box-thumb {
-  transform: translateY(0);
-}
-.item:focus .animation-box-thumb {
+.filter-link:hover .animation-box-thumb,
+.filter-link:focus .animation-box-thumb {
   transform: translateY(0);
 }
 .animation-box-thumb {
